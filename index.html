@@ -33,7 +33,7 @@
             font-family: cursive;
         }
 
-        #gambar2 {
+        #pippin2 {
             display: none;
         }
 
@@ -56,9 +56,9 @@
 
             <span class="content">
                 <h3 style="margin-top: 20px;">0</h3>
-                <span class="gambar">
-                    <img src="gambar1.png" width="180px" id="gambar1">
-                    <img src="gambar2.png" width="180px" id="gambar2">
+                <span class="pippin">
+                    <img src="pippin1.png" width="180px" id="pippin1">
+                    <img src="pippin2.png" width="180px" id="pippin2">
                 </span>
             </span>
 
@@ -81,7 +81,7 @@
                 localStorage.setItem(localStorageKey, 0);
             }
 
-            document.querySelector("#gambar1").addEventListener("click", function(){
+            document.querySelector("#pippin1").addEventListener("click", function(){
                 score_terbaru = score_terbaru += 1;
                 document.querySelector(".content h3").innerHTML = score_terbaru;
 
@@ -94,15 +94,15 @@
                     localStorage.setItem(localStorageKey, count);
                 }
 
-                const gambar1 = document.querySelector("#gambar1");
-                const gambar2 = document.querySelector("#gambar2");
+                const pippin1 = document.querySelector("#pippin1");
+                const pippin2 = document.querySelector("#pippin2");
 
-                gambar1.style.display = "none";
-                gambar2.style.display = "flex";
+                pippin1.style.display = "none";
+                pippin2.style.display = "flex";
 
                 setTimeout(function (){
-                    gambar1.style.display = "flex";
-                    gambar2.style.display = "none";
+                    pippin1.style.display = "flex";
+                    pippin2.style.display = "none";
                 }, 100)
 
                 document.querySelector(".score_terbaru").innerHTML = score_terbaru;
